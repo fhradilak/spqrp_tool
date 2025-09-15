@@ -23,7 +23,6 @@ streamlit run src/main.py
 ```
 4. This opens up a Browser where you can interact with the app
   - alternatively use the URL from the terminal output
-    <img src="https://github.com/user-attachments/assets/0159f11c-2c07-41d2-afe5-5104d88391f9" width="300"/>
 
 ### Using SPQRP
 1. Protein DF: Upload your protein intensity dataframe with the [right format](#data_format)!
@@ -80,8 +79,6 @@ streamlit run src/main.py
     - Precision
     - Sensitivity
     - **`F1 Score`**: The harmonic mean of precision and sensitivity. It's calculated as: ```F1 = 2 * (precision * sensitivity) / (precision + sensitivity)```
-  Example:
-  <img src="https://github.com/user-attachments/assets/0b30f630-4dab-43a8-9c63-7df835ee408a" width="300"/>
 
 3. Results Scoring
     - a. per Patient Summary
@@ -117,7 +114,6 @@ streamlit run src/main.py
 #### Naming of the Proteins:
 ```UniProt Entry-Id + "_"+ Gene Name```
 **Example: P08519_LPA**
-  - <img src="https://github.com/user-attachments/assets/25de5a83-7e05-4379-9087-5656965cc3e4" width="300"/>
 
 #### Cohort data
 The following columns have to be present in the input df.
