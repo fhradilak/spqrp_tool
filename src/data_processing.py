@@ -44,7 +44,7 @@ def process_clustering(result, df, method, n_neighbors, max_cluster_size):
                 max_component_size=max_cluster_size,
             )
 
-            g_new, cluster_assignment, transitive_results = (
+            res = (
                 plot_distances_neighbours_with_coloring_hue(
                     df=df,
                     G=g,
@@ -53,6 +53,9 @@ def process_clustering(result, df, method, n_neighbors, max_cluster_size):
                     return_clusters=True,
                 )
             )
+            
+            cluster_assignment = res["cluster_assignment"] 
+            transitive_results = res["transitive_results"]
 
             fig = plt.gcf()
             buf = BytesIO()
