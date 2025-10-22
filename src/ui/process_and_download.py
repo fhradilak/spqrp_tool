@@ -130,7 +130,7 @@ def render_clustering_results():
             st.table(df_results)
 
         # --- Cluster assignment ---
-        if cached["cluster_assignment"]:
+        if cached["cluster_assignment"] :
             st.subheader("Cluster Assignment Preview")
             df_clusters = pd.DataFrame(
                 list(cached["cluster_assignment"].items()),
@@ -146,5 +146,39 @@ def render_clustering_results():
                 file_name=f"{method}_cluster_assignment.csv",
                 mime="text/csv",
             )
+        if cached["uncertain_nodes"] :
+            st.subheader("Uncertain Samples Preview")
+            df_uncertain_nodes = pd.DataFrame(
+                list(cached["uncertain_nodes"]),
+                columns=["Sample"],
+            )
+            st.dataframe(df_uncertain_nodes.head(20))
+
+            # CSV download
+            csv_buf = df_uncertain_nodes.to_csv(index=False).encode("utf-8")
+            st.download_button(
+                label="Download Uncertain Samples as CSV",
+                data=csv_buf,
+                file_name=f"{method}_uncertain_nodes.csv",
+                mime="text/csv",
+            )
+        if cached["error_candidates"] :
+            st.subheader("Error Candidates Preview")
+            df_error_candidates = pd.DataFrame(
+                list(cached["error_candidates"]),
+                columns=["Sample"],
+            )
+            st.dataframe(df_error_candidates.head(20))
+
+            # CSV download
+            csv_buf = df_error_candidates.to_csv(index=False).encode("utf-8")
+            st.download_button(
+                label="Download Error Candidates as CSV",
+                data=csv_buf,
+                file_name=f"{method}_error_candidates.csv",
+                mime="text/csv",
+            )
+        
+        
     else:
         st.info("No clustering results yet. Click 'Run Clustering' to compute.")

@@ -51,11 +51,15 @@ def process_clustering(result, df, method, n_neighbors, max_cluster_size):
                     coords_2d=coords_2d,
                     method=method,
                     return_clusters=True,
+                    df_name=st.session_state["uploaded_file_name"]
                 )
             )
             
             cluster_assignment = res["cluster_assignments"] 
             transitive_results = res["transitive_results"]
+            uncertain_nodes = res["uncertain_nodes"]
+            error_candidates = res["error_candidates"]
+
 
             fig = plt.gcf()
             buf = BytesIO()
@@ -68,6 +72,8 @@ def process_clustering(result, df, method, n_neighbors, max_cluster_size):
                 "fig_bytes": fig_bytes,
                 "cluster_assignment": cluster_assignment,
                 "transitive_results": transitive_results,
+                "uncertain_nodes":uncertain_nodes,
+                "error_candidates":error_candidates
             }
             st.session_state["last_params"] = current_params
             status.update(label="✅ Clustering complete!", state="complete")
