@@ -54,7 +54,7 @@ def process_clustering(result, df, method, n_neighbors, max_cluster_size):
                 )
             )
             
-            cluster_assignment = res["cluster_assignment"] 
+            cluster_assignment = res["cluster_assignments"] 
             transitive_results = res["transitive_results"]
 
             fig = plt.gcf()
