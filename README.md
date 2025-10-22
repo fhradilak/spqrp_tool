@@ -26,17 +26,20 @@ streamlit run src/main.py
 
 ### Using SPQRP
 1. Protein DF: Upload your protein intensity dataframe with the [right format](#data_format)!
-2. Protein Ranking: Default: use the provided protein ranking or Custom: upload your own ranking with the [right format](#data_format)!
-3. Set Parameters
+   - <img width="393" alt="grafik" src="https://github.com/user-attachments/assets/15b0baf8-70fc-487a-adf0-434418476963" />
+3. Protein Ranking: Default: use the provided protein ranking or Custom: upload your own ranking with the [right format](#data_format)!
+   - <img width="383" alt="grafik" src="https://github.com/user-attachments/assets/b2131a63-b191-43eb-81b7-df3689ef7493" />
+5. Set Parameters
     - Parameters for the Distance Calculation
     - (Parameters for Threshold and Score Calculation)
     - (Number nearest neighbours)
-5. Run
-6. Results & Donwload as csv file
-7. Set Paramters for Clustering
+    - <img width="389"  alt="grafik" src="https://github.com/user-attachments/assets/7838a04b-6c76-4422-8315-c6cd9d481d9e" />
+6. Run
+7. Results & Donwload as csv file
+8. Set Paramters for Clustering
    - Parameters for the expected overall sample number per person
-8. Run
-9. Results & Donwload as csv file
+9. Run
+10. Results & Donwload as csv file
 
 <a id="data_format"></a>
 
@@ -79,6 +82,7 @@ streamlit run src/main.py
     - Precision
     - Sensitivity
     - **`F1 Score`**: The harmonic mean of precision and sensitivity. It's calculated as: ```F1 = 2 * (precision * sensitivity) / (precision + sensitivity)```
+- <img width="381" height="418" alt="grafik" src="https://github.com/user-attachments/assets/c263ae83-87f0-40a9-91b1-b9b9489c77d9" />
 
 3. Results Scoring
     - a. per Patient Summary
@@ -88,6 +92,7 @@ streamlit run src/main.py
    - f1 >= 0.8:'🟢'
    - f1 >= 0.5:'🟡'
    - f1 <0.5: '🔴'
+- <img width="373" alt="grafik" src="https://github.com/user-attachments/assets/1f3e868a-a940-483e-a1a6-f8139dac1687" />
 
 4. Clustering Graph
   - The Graph from the SPQRP clustering-approach.
@@ -107,6 +112,13 @@ streamlit run src/main.py
    - ari and nmi calculated for the overall clustering.
 7. Clustering Assignment
    - List of Samples with their corresponding Cluster ID. If Sample1 and Sample2 are assigned to the same cluster their Cluster ID will be equal.
+
+
+- <img width="408" alt="grafik" src="https://github.com/user-attachments/assets/87edaeeb-1dc9-4eca-b947-81a4c6308954" />
+- <img width="382" alt="grafik" src="https://github.com/user-attachments/assets/8c3bfde9-6959-4e61-a858-ec5ff10db991" />
+- <img width="293" alt="grafik" src="https://github.com/user-attachments/assets/27520f0b-f814-48a1-bfeb-a38dcd1d11c7" />
+- <img width="247" alt="grafik" src="https://github.com/user-attachments/assets/06a1baf7-5b5d-4ed4-935e-5e1c662e2166" />
+
 ## 🗃️ Input Data Format
 1. **Cohort data**: protein intensities per sample
 2. Protein importance ranking list (optional - can use default list)
@@ -129,3 +141,5 @@ The following columns have to be present in the input df.
 |-------------|------------------------------------|
 | `Protein`   | Name or identifier of the protein  |
 | `Importance`| Importance/ Ranking of the protein |
+
+
