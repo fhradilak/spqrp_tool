@@ -14,7 +14,7 @@ Sample Provenance Quality Resolver in Proteomics is a tool that provides quality
 
 ## First steps
 ### Running SPQRP Locally
-1. Download/ clone the repository
+1. Download/ clone the repository. In a terminal enter: ``` git clone https://github.com/fhradilak/spqrp_tool ```
 2. Open a terminal where the repository is saved on your computer and [create a new environment from requirements.txt](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/).
    - (Windows: create a new environemnt: ```py -m venv .venv```, activate it ```.venv\Scripts\activate```, install requirements: ```py -m pip install -r requirements.txt```)
 4. To start ther app run
