@@ -1,4 +1,4 @@
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)  [![DOI](https://zenodo.org/badge/1057154305.svg)](https://doi.org/10.5281/zenodo.17435178)
 
 # Local SPQRP TOOL
 Sample Provenance Quality Resolver in Proteomics is a tool that provides quality assessment for plasma-MS-proteome studies. Recent advancements in MS technology and lab methods opened the door for large-scale proteomics and raised a growing concern regarding sample mix-ups. This tool creates a visual interface to help scientists evaluate whether their sample data is safe for further analysis. It uses functions from the python package (also usable in R) for [spqrp](https://github.com/fhradilak/spqrp/).
